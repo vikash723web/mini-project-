@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans tracking-tight;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+
+/* Custom Healthcare Clean White & Teal Styling */
+.medical-grid-bg {
+  background-color: #f8fafc;
+  background-image: radial-gradient(rgba(13, 148, 136, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.medical-card-glow {
+  box-shadow: 0 4px 20px -2px rgba(13, 148, 136, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.medical-card-glow-danger {
+  box-shadow: 0 4px 20px -2px rgba(239, 68, 68, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.medical-card-glow-success {
+  box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom Scrollbar for Medical Viewers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}
+
+/* Scanning Line Keyframes */
+@keyframes scanline {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 96%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scan-line {
+  animation: scanline 2.5s ease-in-out infinite alternate;
+}
+
+/* Print/Export Styling for jsPDF & Report preview */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
