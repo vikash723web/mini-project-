@@ -1,0 +1,36 @@
+{
+    "project": "Lung Cancer Detection and Diagnostic Support System",
+    "author": "Member 2 - ML Pipeline",
+    "best_model": "Random Forest",
+    "feature_order": [
+        "contrast",
+        "area"
+    ],
+    "n_features": 2,
+    "target_mapping": {
+        "0": "Normal",
+        "1": "Cancer"
+    },
+    "risk_formula": "risk_score = (model_confidence * 0.6) + (symptom_score * 0.4)",
+    "risk_thresholds": {
+        "low": "< 40.0",
+        "medium": "40.0 - 70.0",
+        "high": "> 70.0"
+    },
+    "feature_specifications": {
+        "contrast": {
+            "type": "float",
+            "mean": 1.0697981770833334,
+            "std": 0.6771620158445347,
+            "min": 0.2216299019607842,
+            "max": 3.696629901960784
+        },
+        "area": {
+            "type": "float",
+            "mean": 45647.046875,
+            "std": 8282.912888320729,
+            "min": 15233.0,
+            "max": 65025.0
+        }
+    }
+}
